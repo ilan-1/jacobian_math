@@ -18,7 +18,7 @@ if ((x**2+y**2)**0.5) > (L1+L2):
     print("invalid entry")
     exit()
 
-c = np.arctan2(y,x)
+c = np.arctan2(x,y)
 print(c)
 
 b1 = (L1**2+L2**2-x**2-y**2)/(2*L1*L2)
