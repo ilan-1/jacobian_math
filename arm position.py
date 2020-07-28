@@ -36,3 +36,30 @@ t2l = 180*(b - np.pi)/np.pi
 print('for the given input the righty angles of the link are = ',t1r,t2r )
 print('for the given input the lefty angles of the link are = ',t1l,t2l )
 
+point1 = [0,0]
+point2 = [L1*np.cos(c-a), L1*np.sin(c-a)]
+point3 = [L1*np.cos(c+a), L1*np.sin(c+a)]
+point4 = [x,y]
+ 
+xval1 = [0,L1*np.sin(c-a)]
+yval1 = [0,L1*np.cos(c-a)]
+xval2 = [L1*np.sin(c-a),x]
+yval2 = [L1*np.cos(c-a),y]
+xval3 = [0,L1*np.sin(c+a)]
+yval3 = [0,L1*np.cos(c+a)]
+xval4 = [L1*np.sin(c+a),x]
+yval4 = [L1*np.cos(c+a),y]
+
+f,ax = plt.subplots(1)
+
+ax.plot(xval1, yval1, 'r', label = 'link1')
+ax.plot(xval2, yval2, 'b', label = 'link2')
+ax.plot(xval3, yval3, 'r')
+ax.plot(xval4, yval4, 'b')
+
+plt.axis('square')
+plt. title('Position of the arm in 2D space')
+
+plt.grid()
+plt.legend()
+plt.show()
